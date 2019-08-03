@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<!-- Name: Bruce Y Phommaly
+    Student Number: 14215222
+    Date: 02/24/17 -->
+
+<html>
+    <head>
+        <title>Sixth Challenge</title>
+	    <meta charset="utf-8">
+        
+		<style type="text/css">
+            
+			#buttons, #preview  {
+				float: left;
+			}
+            
+			textarea {
+				width: 400px;
+				height: 200px;
+                border: 2px solid green;
+				display: block;
+				margin-bottom: 10px;
+				font-size: 18px;
+				font-family: serif;
+			}
+            
+            #preview {
+				width: 500px;
+				height: 420px;
+                border: 2px solid black;
+				margin-left: 20px;
+			}
+            
+            button {
+				width: 120px;
+                border: none;
+                background-color: forestgreen;
+                color: white;
+                margin: 8px;
+                font-size: 16px;
+			}
+            
+		</style>
+        
+		<style id = "styles" ></style>
+
+		<script type="text/javascript">
+            function cssdblClick()
+            {
+                css.value="h3 {\n"
+                +"\tcolor:red;\n"
+                +"}\n\n"
+                + "p {\n"
+                +"\tfont-family: cursive, arial;\n"
+                +"\tfont-size: 16pt\n"
+                +"}"
+            }
+            
+            function htmldblClick()
+            {
+                html.value="<h3>Hello World</h3>\n\n"
+                +"<p>Can you see me?</p>"
+            }
+            
+            function cleardblClick()
+            {
+                var title = prompt("Please enter the new title", "NewTitle");
+                
+                document.title = title;
+            }
+            
+			function launchButton() 
+            {
+				var html = document.getElementById("html");
+				var preview = document.getElementById("preview");
+                
+				preview.innerHTML = html.value;
+			}
+            
+			function clearButton() 
+            {
+                var css = document.getElementById("css");
+				var html = document.getElementById("html");
+				var preview = document.getElementById("preview");
+				var style = document.getElementById("styles");
+                
+				css.value = null;
+				html.value = null;
+				preview.innerHTML = null;
+				style.innerHTML = null;
+			}
+            
+			function toggleButton() 
+            {
+				var style = document.getElementById('styles');
+                
+				if(!style.innerHTML)
+                {
+					style.innerHTML = document.getElementById('css').value;
+				}
+				else 
+                {
+					style.innerHTML = null;
+				}
+            }
+		</script>
+
+	</head>
+	<body>
+		<div id="wrapper" class="group">
+			<div id="buttons">
+				<textarea id="css" placeholder="CSS..." ondblClick="cssdblClick()"></textarea>
+				<textarea id="html" placeholder="HTML..." ondblclick="htmldblClick()"></textarea>
+				<button type="button" onclick="launchButton()">Launch</button>
+				<button type="button" onclick="clearButton()" ondblclick="cleardblClick()">Clear</button>
+				<button type="button" onclick="toggleButton()">Toggle</button>
+			</div>
+			<div id="preview"></div>
+		</div>
+	</body>
+</html>

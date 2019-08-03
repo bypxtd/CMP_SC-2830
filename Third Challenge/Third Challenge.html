@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<!-- Name: Bruce Y Phommaly
+    Student Number: 14215222
+    Date: 01/29/17 -->
+
+<html>
+    <head>
+        <title>Third Challenge Project</title>
+        <meta charset="utf-8">
+        <style>
+            
+        h1
+            {
+                text-align: center;
+            }
+            
+        #container
+            {
+                width: 1000px;
+                border: 2px;
+                border-style: solid;
+                border-color: goldenrod;
+                padding: 50px;
+                border-radius: 100px;
+                margin: 20px auto;
+            }
+            
+        div
+            {
+                padding: 25px;
+                margin: 10px;
+                border: 10px;
+                border-style: double;
+                border-color: black;
+                border-radius: 50px;
+            }
+            
+            /* 
+            Physical width:
+                250px           ->      Content width
+                50px            ->      Padding
+                20px            ->      Border
+                20px            ->      Margin
+            ------------------------------------
+                340px;
+            */
+        #left
+            {
+                width: 250px;
+                float: left;
+                background-color: forestgreen;
+            }
+            
+            /* 
+            Physical width:
+                150px           ->      Content width
+                50px            ->      Padding
+                20px            ->      Border
+                20px            ->      Margin
+            ------------------------------------
+                240px;
+            */
+        #center
+            {
+                width: 150px;
+                float: left;
+                background-color: gold;
+            }
+            
+            /* 
+            Physical width:
+                340px           ->      Left physical width
+                240px           ->      Center physical width
+            ------------------------------------
+                580px
+            
+                1000px          ->      Container content width
+                580px           ->      Left + Center physical width
+            ------------------------------------
+                420px           ->      Container content width - (Left + Center physical width)
+                90px            ->      Column padding + border + margin
+            ------------------------------------
+                330px
+            */
+        #right
+            {
+                width: 330px;
+                float: left;
+                background-color: tomato;
+            }
+
+        h2
+            {
+                text-align: center;
+            }
+            
+        .group:after 
+            {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        
+        <div id="container" class="group">
+            
+            <h1>CS2830 Third Challenge</h1>
+            
+            <div id="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit mauris eu mi euismod dictum. Aliquam erat volutpat. Donec congue nulla vitae egestas semper. Donec fringilla varius fringilla. Nunc congue faucibus condimentum. Donec sit amet augue vitae est facilisis elementum sit amet in dolor. Nam mollis nisl eu ligula posuere pharetra. Morbi non lobortis quam, a mollis nulla. Proin tempor fermentum faucibus. Donec vehicula nulla magna, sit amet lacinia sem aliquam in. Pellentesque neque ante, blandit id mattis sit amet, pellentesque in sem. Duis a volutpat risus, id feugiat nunc. Aliquam porta nisi ac hendrerit rutrum. Donec quam orci, bibendum ut congue id, rutrum eget quam. </div>
+            
+            <div id="center"> Cras condimentum viverra mi at feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam facilisis facilisis lacus, vel mollis libero euismod id. Vivamus ornare turpis non pharetra auctor. Nunc pulvinar aliquet erat, nec imperdiet ex bibendum sit amet. In vehicula sollicitudin tellus. Vivamus nec ligula quis lectus aliquet feugiat sit amet vel est. </div>
+            
+            <div id="right"> Curabitur non risus vitae nulla gravida pulvinar ut in libero. Ut tincidunt quis nisi aliquet maximus. Sed elementum lacus eget quam dictum, sed gravida dolor commodo. Etiam aliquet massa augue, quis rhoncus nisi molestie in. Integer placerat molestie vulputate. Cras commodo facilisis felis. Curabitur vehicula aliquet odio sed tincidunt. Maecenas et dignissim augue. Integer mattis dolor eget nisl cursus aliquet. Fusce id nunc nec lorem fermentum posuere id et lacus. Curabitur blandit erat nisi, quis sodales est bibendum ac. Suspendisse pulvinar ultrices elit vel pulvinar. Praesent ut est placerat, laoreet dolor vel, molestie tortor. Pellentesque ligula nunc, vehicula nec neque non, vestibulum laoreet augue. Nulla tincidunt semper urna nec rutrum. </div>
+            
+        </div>
+        
+        <h2>Created By: Bruce Phommaly</h2>
+        
+    </body>
+</html>
